@@ -69,6 +69,19 @@ ul {
   color: var(--text-secondary-color);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*----------------------------------------LOGO-----------------------------------------*/
 
 .logo {
@@ -112,35 +125,6 @@ ul {
 
 .button:hover,
 .button:focus {
-  background-color: var(--accent-secondary-color);
-}
-
-.button-hero {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 16px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: var(--accent-main-color);
-}
-
-.portfolio-btns .button {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 24px;
-  padding-right: 24px;
-
-  background-color: var(--background-secondary-color);
-  color: var(--accent-main-color);
-
-  border: 1px solid var(--footer-text-color);
-  border-radius: 4px;
-}
-
-.portfolio-btns .button:hover,
-.portfolio-btns .button:focus {
-  color: var(--background-main-color);
   background-color: var(--accent-secondary-color);
 }
 
@@ -218,6 +202,16 @@ ul {
   color: var(--background-main-color);
 }
 
+.button-hero {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: var(--accent-main-color);
+}
+
 /*ADVANTAGES*/
 
 .advantages-list {
@@ -266,13 +260,32 @@ ul {
 
 /*PORTFOLIO*/
 .gallery {
-  padding-top: 120px;
+  padding-top: 96px;
 }
 .portfolio-btns {
   display: flex;
   justify-content: center;
   gap: 24px;
   margin-bottom: 72px;
+}
+
+.portfolio-btns .button {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  background-color: var(--background-secondary-color);
+  color: var(--accent-main-color);
+
+  border: 1px solid var(--footer-text-color);
+  border-radius: 4px;
+}
+
+.portfolio-btns .button:hover,
+.portfolio-btns .button:focus {
+  color: var(--background-main-color);
+  background-color: var(--accent-secondary-color);
 }
 
 .portfolio {
@@ -286,20 +299,17 @@ ul {
   text-decoration: none;
   color: var(--text-main-color);
 }
-.img-portfolio img {
+.portfolio-item img {
   display: block;
 }
 .portfolio-item {
-  background-color: var(--background-main-color);
-  width: calc((100%-48px) / 3);
+  border-bottom: 1px solid var(--footer-text-color);
 }
 .portfolio-item-descr {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
   border-bottom: 1px solid var(--footer-text-color);
-  border-right: 1px solid var(--footer-text-color);
-  border-left: 1px solid var(--footer-text-color);
 }
 /*----------------------------------------FOOTER-----------------------------------------*/
 
